@@ -401,12 +401,12 @@ class PlayBoard : AppCompatActivity() {
                 println("match draw")
             }
 
-            if((comp_total>max) and(user_score<max) and (comp_total>user_score)){
+            if((comp_total>max) and (comp_total>user_score)){
                 compW=true
                 println("computer win")
             }
 
-            if((comp_total<max) and(user_score>max) and (comp_total<user_score)){
+            if((user_score>max) and (comp_total<user_score)){
                 userW=true
                 println("user win")
             }
