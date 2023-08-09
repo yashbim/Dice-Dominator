@@ -398,14 +398,17 @@ class PlayBoard : AppCompatActivity() {
 
             if ((comp_total==max) and(user_score==max)){
                 draw=true
+                println("match draw")
             }
 
             if((comp_total>max) and(user_score<max) and (comp_total>user_score)){
                 compW=true
+                println("computer win")
             }
 
             if((comp_total<max) and(user_score>max) and (comp_total<user_score)){
                 userW=true
+                println("user win")
             }
 
 
