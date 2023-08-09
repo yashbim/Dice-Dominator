@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="userthrow" type="id" />
+    <item name="usersnumbers" type="id" />
+    <item name="computernumbers" type="id" />
+    <item name="user_score_round" type="id" />
+    <item name="user_score" type="id" />
+    <item name="computer_score_round" type="id" />
+    <item name="computer_score" type="id" />
+</resources>
