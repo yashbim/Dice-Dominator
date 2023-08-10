@@ -38,7 +38,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
-        android:id="@+id/silhoutte"
+        android:id="@+id/rotatingImage"
         android:layout_width="139dp"
         android:layout_height="159dp"
         app:layout_constraintBottom_toTopOf="@+id/newgamebutton"

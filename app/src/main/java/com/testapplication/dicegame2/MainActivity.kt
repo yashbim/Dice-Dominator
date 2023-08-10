@@ -1,12 +1,15 @@
-//https://drive.google.com/drive/folders/1MDBE8nOUM563217jzZ8ex0ggebpd_3QH?usp=share_link
 package com.testapplication.dicegame2
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.PersistableBundle
+import android.view.View
+import android.view.animation.Animation
+import android.view.animation.RotateAnimation
 import android.widget.Button
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 
@@ -16,6 +19,8 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+
 
         val aboutbutton: Button = findViewById(R.id.aboutbutton)
         aboutbutton.setOnClickListener {
@@ -42,7 +47,27 @@ class MainActivity : AppCompatActivity() {
 
         }
 
+        //click listener for rotating silhouette animation
+        val rotatingImage: ImageView = findViewById(R.id.rotatingImage)
+        rotatingImage.setOnClickListener {
+            rotateImage(rotatingImage)
+        }
 
 
+
+    }
+
+    //image rotate animation
+    private fun rotateImage(view: View) {
+        val rotateAnimation = RotateAnimation(
+            0f, 720f,
+            Animation.RELATIVE_TO_SELF, 0.5f,
+            Animation.RELATIVE_TO_SELF, 0.5f
+        )
+
+        rotateAnimation.duration = 500 // Duration of the rotation animation in milliseconds
+        rotateAnimation.fillAfter = true // Keeps the image in the rotated state after the animation
+
+        view.startAnimation(rotateAnimation)
     }
 }
