@@ -22,8 +22,14 @@ class MainActivity : AppCompatActivity() {
             // Do something in response to the about button click
 
             val builder = AlertDialog.Builder(this)
-            builder.setTitle("20210695 Yashasshree")
-            builder.setMessage("I confirm that I understand what plagiarism is and have read and understood the section on assessment offences in the essential information for students. The work that I have submitted is entirely my own. Any work from other authors is duly referenced and acknowledged.")
+            builder.setTitle("Instructions : ")
+            builder.setMessage("You have 5 dice to roll, so does the computer. " +
+                    "Once you click throw, you get your results. " +
+                    "Click score to confirm the scores and add them to the total. " +
+                    "If your scores are low, don't worry you can re-roll them by pressing throw once again," +
+                    "but click on the dice that you are satisfied with to stop them from re-rolling. " +
+                    "You can do this 3 times, and on the 3rd time, your scores will be added automatically." +
+                    "\n\nHappy dicing!!!")
             builder.setNeutralButton("Ok"){dialog, id -> dialog.cancel()}
             builder.show()
 
