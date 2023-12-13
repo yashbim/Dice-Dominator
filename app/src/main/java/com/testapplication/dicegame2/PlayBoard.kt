@@ -5,6 +5,9 @@ import android.graphics.Color
 import android.os.Bundle
 import android.util.TypedValue
 import android.view.Gravity
+import android.view.View
+import android.view.animation.Animation
+import android.view.animation.RotateAnimation
 import android.widget.*
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
@@ -97,6 +100,8 @@ class PlayBoard : AppCompatActivity() {
         cimg3 = findViewById(R.id.compslot3)
         cimg4 = findViewById(R.id.compslot4)
         cimg5 = findViewById(R.id.compslot5)
+
+        val rot1: ImageView = findViewById(R.id.rot1)
 
         //button declaration
         val userthrow: Button = findViewById(R.id.userthrow)
@@ -248,6 +253,7 @@ class PlayBoard : AppCompatActivity() {
                 reroll[0] = "reroll"
             }
 
+
             val dice2 : ImageView = findViewById(R.id.userslot2)
             dice2.setOnClickListener{
                 clickCheck=true
@@ -309,6 +315,7 @@ class PlayBoard : AppCompatActivity() {
 
 
         }
+
         fun hardMode(){
             println("Hard Mode $hardmode")
             // Change computer 1st image
@@ -579,7 +586,11 @@ class PlayBoard : AppCompatActivity() {
             score()
         }
 
+
+
+
     }
+
 
 
     override fun onSaveInstanceState(outState: Bundle,) {
